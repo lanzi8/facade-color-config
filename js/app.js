@@ -13,37 +13,49 @@ const calculateFilter = (hex) => {
 };
 
 const setBaseColorImage = (idSuffix, color) => {
-    const images = document.querySelectorAll(".img.basecolor." + idSuffix);
+    const images = document.querySelectorAll('.img.basecolor.' + idSuffix);
     const { filter } = calculateFilter(color);
 
     images.forEach((img) => {
         img.setAttribute(
-            "style",
+            'style',
             `filter: invert(1) ${filter};`
         );
     });
 };
 
 const handleColorPickerChange = (idSuffix) => {
-    colorpicker = document.querySelector("#colorpicker-" + idSuffix);
-    colorpicker.addEventListener("input", (evt) => {
+    colorpicker = document.querySelector('#colorpicker-' + idSuffix);
+    colorpicker.addEventListener('input', (evt) => {
         setBaseColorImage(idSuffix, evt.target.value);
     });
 };
 
 const initColorValues = () => {
-    const initialBase01 = "#898989";
-    const initialBase02 = "#FFFFFF";
+    const initialBase01 = '#898989';
+    const initialBase02 = '#FFFFFF';
     document.querySelector('#colorpicker-base01').value = initialBase01;
     document.querySelector('#colorpicker-base02').value = initialBase02;
-    setBaseColorImage("base01", initialBase01);
-    setBaseColorImage("base02", initialBase02);
+    setBaseColorImage('base01', initialBase01);
+    setBaseColorImage('base02', initialBase02);
+};
+
+const handleCheckboxChange = () => {
+    const checkbox = document.querySelector('#original-checkbox');
+    checkbox.addEventListener('input', (evt) => {
+
+        const images = document.querySelectorAll('.img.bg.original');
+        images.forEach((img) => {
+            evt.target.checked ? img.classList.add('show') : img.classList.remove('show');
+        });
+    });
 };
 
 const init = () => {
     initColorValues();
-    handleColorPickerChange("base01");
-    handleColorPickerChange("base02");
+    handleCheckboxChange();
+    handleColorPickerChange('base01');
+    handleColorPickerChange('base02');
 };
 
 init();
