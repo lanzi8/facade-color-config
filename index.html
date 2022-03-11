@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <!-- (c) lanz 2022-->
+        <meta charset="utf-8" />
+        <meta name="author" content="lanz" />
+        <title>Fassadenkonfigurator</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <h1>Fassaden Konfigurator</h1>
+        <div class="config-dialog">
+            <div class="colorpicker-wrapper">
+                <label for="colorpicker-base01">Farbe 1: </label>
+                <input id="colorpicker-base01" type="color" class="colorpicker base01" />
+            </div>
+            <div class="colorpicker-wrapper">
+                <label for="colorpicker-base02">Farbe 2: </label>
+                <input id="colorpicker-base02" type="color" class="colorpicker base02" />
+            </div>
+        </div>
+        <div class="image-container-wrapper">
+            <div class="image-wrapper">
+                <img width="100%" height="auto" class="img bg original" src="assets/01/original.png" />
+                <img width="100%" height="auto" class="img bg" src="assets/01/original.png" />
+                <img width="100%" height="auto" class="img basecolor base01" src="assets/01/base01.png" />
+                <img width="100%" height="auto" class="img basecolor base02" src="assets/01/base02.png" />
+                <img width="100%" height="auto" class="img shadow" src="assets/01/shadow.png" />
+            </div>
+
+            <div class="image-wrapper">
+                <img width="100%" height="auto" class="img bg original" src="assets/02/original.png" />
+                <img width="100%" height="auto" class="img bg" src="assets/02/original.png" />
+                <img width="100%" height="auto" class="img basecolor base01" src="assets/02/base01.png" />
+                <img width="100%" height="auto" class="img basecolor base02" src="assets/02/base02.png" />
+                <img width="100%" height="auto" class="img shadow" src="assets/02/shadow.png" />
+            </div>
+
+            <div class="image-wrapper">
+                <img width="100%" height="auto" class="img bg original" src="assets/03/original.png" />
+                <img width="100%" height="auto" class="img bg" src="assets/03/original.png" />
+                <img width="100%" height="auto" class="img basecolor base01" src="assets/03/base01.png" />
+                <img width="100%" height="auto" class="img basecolor base02" src="assets/03/base02.png" />
+                <img width="100%" height="auto" class="img shadow" src="assets/03/shadow.png" />
+            </div>
+
+            <div class="image-wrapper">
+                <img width="100%" height="auto" class="img bg original" src="assets/04/original.png" />
+                <img width="100%" height="auto" class="img bg" src="assets/04/original.png" />
+                <img width="100%" height="auto" class="img basecolor base01" src="assets/04/base01.png" />
+                <img width="100%" height="auto" class="img basecolor base02" src="assets/04/base02.png" />
+                <img width="100%" height="auto" class="img shadow" src="assets/04/shadow.png" />
+            </div>
+        </div>
+
+        <script src="./js/color.js"></script>
+        <script src="./js/solver.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

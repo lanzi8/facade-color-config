@@ -1,0 +1,43 @@
+/* (c) lanz 2022 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.config-dialog {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 150px;
+    height: 100px;
+    background: rgba(255, 136, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.config-dialog .colorpicker-wrapper {
+    margin-bottom: 10px;
+}
+
+.image-container-wrapper .image-wrapper {
+    position: relative;
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 1334px;
+}
+
+.image-container-wrapper .image-wrapper .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-container-wrapper .image-wrapper .img.original {
+    position: inherit;
+    opacity: 0;
+}
